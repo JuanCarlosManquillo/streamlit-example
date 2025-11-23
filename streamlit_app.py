@@ -45,6 +45,7 @@ model_obj, model_status = load_model()
 
 # Si no hay modelo válido, permitir subirlo desde la UI o usar un fallback dummy
 if model_obj is None:
+    
     if model_status == "not_found":
         st.warning("No se encontró 'temporal_royanet_ssim_model.pth' en el directorio del proyecto.")
     elif model_status == "eof":
